@@ -5,7 +5,7 @@ module.exports = async (secret, title, body) => {
 
   let config = {
     method: 'post',
-    url: `http://sc.ftqq.com/${secret}.send`,
+    url: `http://sctapi.ftqq.com/${secret}.send`,
     headers: {
       Host: 'sc.ftqq.com',
       Accept: '*/*',
