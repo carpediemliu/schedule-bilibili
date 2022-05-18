@@ -2,7 +2,7 @@ const axios = require('axios');
 
 module.exports = async (secret, title, body) => {
   let data = `text=${title}&desp=${body}`;
-
+  let url = `http://sctapi.ftqq.com/${secret}.send?`+data;
   let config = {
     method: 'post',
     url: `http://sctapi.ftqq.com/${secret}.send?`+data,
@@ -21,5 +21,5 @@ module.exports = async (secret, title, body) => {
     data: data,
   };
 
-  return await axios.get('http://sctapi.ftqq.com/${secret}.send?'+data);
+  return await axios.get(url);
 };
