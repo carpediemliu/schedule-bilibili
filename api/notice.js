@@ -5,7 +5,7 @@ module.exports = async (secret, title, body) => {
 
   let config = {
     method: 'post',
-    url: `http://sctapi.ftqq.com/${secret}.send`,
+    url: `http://sctapi.ftqq.com/${secret}.send?`+data,
     headers: {
       Host: 'sc.ftqq.com',
       Accept: '*/*',
@@ -21,5 +21,5 @@ module.exports = async (secret, title, body) => {
     data: data,
   };
 
-  return await axios(config);
+  return await axios.get('http://sctapi.ftqq.com/${secret}.send?'+data);
 };
